@@ -21,3 +21,7 @@ function divide(num1, num2) {
     const total = num1 / num2;
     return total;
 }
+
+function operate(x, y, sign) {
+    console.log(add(x, y));
+}
