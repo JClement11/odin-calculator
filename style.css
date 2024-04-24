@@ -11,3 +11,11 @@
     right: 0;
     overflow: hidden;
 }
+
+.display {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 150px;
+    font-size: 75px;
+}
