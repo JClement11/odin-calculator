@@ -18,6 +18,8 @@
     justify-content: flex-end;
     height: 150px;
     font-size: 75px;
+    background: #233D4D;
+    color: white;
 }
 
 .button {
@@ -37,4 +39,19 @@
 .enter {
     grid-column: 4 / 5; /* Start at column #4 and end at column #5 (the very right edge). */
     grid-row: 2 / span 3;
+    background: #FE7F2D;
+}
+
+.add, 
+.subtract,
+.multiply, 
+.divide {
+    background: #A1C181;
+}
+
+.button.number,
+.decimal,
+.backspace,
+.clear {
+    background: #FCCA46;
 }
