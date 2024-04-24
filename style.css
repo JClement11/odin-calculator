@@ -19,3 +19,22 @@
     height: 150px;
     font-size: 75px;
 }
+
+.button {
+    font-size: 35px;
+    border: none;
+}
+
+.keys {
+    height: 650px;
+    width: 600px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1px;
+    background: grey;
+}
+
+.enter {
+    grid-column: 4 / 5; /* Start at column #4 and end at column #5 (the very right edge). */
+    grid-row: 2 / span 3;
+}
