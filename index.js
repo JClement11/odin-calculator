@@ -4,7 +4,7 @@ let operator = "";
 let displayValue = "";
 let total;
 
-function add(num1, num2) {
+function add(num1, num2) { 
     total = +num1 + +num2;
     display.textContent = total;
     currentValue = "";
@@ -66,7 +66,7 @@ operators.forEach((operator) => operator.addEventListener("click", function(e) {
 
 function handleNumber(num) {
     displayValue += num;
-    currentValue = num;
+    currentValue += num;
 }
 
 function handleOperator(op) {
@@ -87,6 +87,5 @@ const buttonEnter = document.querySelector(".enter");
 buttonEnter.addEventListener("click", () => {
     display.textContent = "";
     displayValue = "";
-    console.log(displayValue);
     operate(previousValue, currentValue, operator);
 });
