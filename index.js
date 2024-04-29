@@ -6,6 +6,7 @@ let total;
 
 function add(num1, num2) { 
     total = +num1 + +num2;
+    total = parseFloat(total.toFixed(2));
     display.textContent = total;
     currentValue = "";
     previousValue = "";
@@ -13,6 +14,7 @@ function add(num1, num2) {
 
 function subtract(num1, num2) {
     total = +num1 - +num2;
+    total = parseFloat(total.toFixed(2));
     display.textContent = total;
     currentValue = "";
     previousValue = "";
@@ -21,6 +23,7 @@ function subtract(num1, num2) {
 
 function multiply(num1, num2) {
     total = +num1 * +num2;
+    total = parseFloat(total.toFixed(2));
     display.textContent = total;
     currentValue = "";
     previousValue = "";
@@ -36,6 +39,7 @@ function divide(num1, num2) {
     } 
     else {
         total = +num1 / +num2;
+        total = parseFloat(total.toFixed(2));
         display.textContent = total;
         currentValue = "";
         previousValue = "";
