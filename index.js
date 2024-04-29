@@ -5,22 +5,33 @@ let displayValue = "";
 let total;
 
 function add(num1, num2) {
-    const total = num1 + num2;
-    return total;
+    total = +num1 + +num2;
+    display.textContent = total;
+    currentValue = "";
+    previousValue = "";
 }
 
 function subtract(num1, num2) {
-    const total = num1 - num2;
+    total = +num1 - +num2;
+    display.textContent = total;
+    currentValue = "";
+    previousValue = "";
     return total;
 }
 
 function multiply(num1, num2) {
-    const total = num1 * num2;
+    total = +num1 * +num2;
+    display.textContent = total;
+    currentValue = "";
+    previousValue = "";
     return total;
 }
 
 function divide(num1, num2) {
-    const total = num1 / num2;
+    total = +num1 / +num2;
+    display.textContent = total;
+    currentValue = "";
+    previousValue = "";
     return total;
 }
 
