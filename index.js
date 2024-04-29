@@ -1,6 +1,8 @@
-let num1;
-let num2;
-let operator;
+let currentValue = "";
+let previousValue = "";
+let operator = "";
+let displayValue = "";
+let total;
 
 function add(num1, num2) {
     const total = num1 + num2;
