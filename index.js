@@ -106,6 +106,33 @@ buttonEnter.addEventListener("click", () => {
     displayValue = "";
     operate(previousValue, currentValue, operator);
 });
+
+const buttonBackspace = document.querySelector(".backspace");
+buttonBackspace.addEventListener("click", () => {
+    if (currentValue.length !== 0 && previousValue.length !== 0 && operator.length !== 0) {
+        currentValue = currentValue.slice(0, -1);
+        display.textContent = displayValue.slice(0, -1);
+        displayValue = displayValue.slice(0,-1);
+    }
+    else if (currentValue.length === 0 && previousValue.length !== 0 && operator.length !== 0) {
+        operator = operator.slice(0, -1);
+        display.textContent = displayValue.slice(0, -1);
+        displayValue = displayValue.slice(0,-1);
+        currentValue = previousValue;
+        previousValue = "";
+    }
+    else if (currentValue.length === 0 && previousValue.length !== 0 && operator.length === 0) {
+        previousValue = previousValue.slice(0, -1);
+        display.textContent = displayValue.slice(0, -1);
+        displayValue = displayValue.slice(0,-1);
+    }
+    else if (currentValue.length !== 0 && previousValue.length === 0 && operator.length === 0) {
+        currentValue = currentValue.slice(0, -1);
+        display.textContent = displayValue.slice(0, -1);
+        displayValue = displayValue.slice(0,-1);
+    }
+});
+
 const buttonClear = document.querySelector(".clear");
 buttonClear.addEventListener("click", () => {
     currentValue = "";
