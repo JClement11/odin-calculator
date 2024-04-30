@@ -62,7 +62,7 @@ function operate(x, y, sign) {
     }
 }
 
-const display = document.querySelector(".display");
+let display = document.querySelector(".display");
 let numbers = document.querySelectorAll(".number");
 let operators = document.querySelectorAll(".operator");
 
