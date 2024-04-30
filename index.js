@@ -106,3 +106,10 @@ buttonEnter.addEventListener("click", () => {
     displayValue = "";
     operate(previousValue, currentValue, operator);
 });
+const buttonClear = document.querySelector(".clear");
+buttonClear.addEventListener("click", () => {
+    currentValue = "";
+    previousValue = "";
+    displayValue = "";
+    display.textContent = "";
+});
