@@ -72,15 +72,15 @@ numbers.forEach((number) => number.addEventListener("click", function(e) {
     display.textContent = displayValue;
 }));
 
-operators.forEach((operator) => operator.addEventListener("click", function(e) {
-    handleOperator(e.target.textContent);
-    display.textContent = displayValue;
-}));
-
 function handleNumber(num) {
     displayValue += num;
     currentValue += num;
 }
+
+operators.forEach((operator) => operator.addEventListener("click", function(e) {
+    handleOperator(e.target.textContent);
+    display.textContent = displayValue;
+}));
 
 function handleOperator(op) {
     displayValue += op;
