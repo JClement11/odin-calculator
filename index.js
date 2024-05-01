@@ -96,13 +96,15 @@ const buttonDecimal = document.querySelector(".decimal");
 buttonDecimal.addEventListener("click", addDecimal);
 
 function addDecimal() {
-    if (display.textContent === "ERROR! You can't divide by zero silly!") {
-        display.textContent = "";
-    }
-    display.style.fontSize = "75px";
-    display.textContent += ".";
-    displayValue += ".";
-    currentValue += ".";  
+    if (currentValue.includes(".") === false) {
+        if (display.textContent === "ERROR! You can't divide by zero silly!") {
+            display.textContent = "";
+        }
+        display.style.fontSize = "75px";
+        display.textContent += ".";
+        displayValue += ".";
+        currentValue += ".";
+    }  
 }
 
 const buttonEnter = document.querySelector(".enter");
