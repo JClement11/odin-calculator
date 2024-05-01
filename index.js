@@ -82,6 +82,10 @@ operators.forEach((operator) => operator.addEventListener("click", function(e) {
 }));
 
 function handleOperator(op) {
+    if (currentValue.length === 0){
+        displayValue += total;
+        currentValue = total;
+    }
     if (displayValue.includes("+") === false && displayValue.includes("−") === false
     && displayValue.includes("×") === false && displayValue.includes("÷") === false) {
         displayValue += op;
