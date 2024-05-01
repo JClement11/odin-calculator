@@ -153,3 +153,32 @@ function clearCalculator() {
     displayValue = "";
     display.textContent = "";
 }
+
+window.addEventListener("keydown", handleKeyPress);
+
+function handleKeyPress(e) {
+    if (e.key >= 0 && e.key <= 9) {
+        handleNumber(e.key);
+    }
+    if (e.key === "+") {
+        handleOperator(e.key);
+    }
+    if (e.key === "-") {
+        handleOperator("−");
+    }
+    if (e.key === "*") {
+        handleOperator("×");
+    }
+    if (e.key === "/") {
+        handleOperator("÷");
+    }
+    if (e.key === ".") {
+        addDecimal(e.key);
+    }
+    if (e.key === "Enter") {
+        calculateExpression(e.key);
+    }
+    if (e.key === "Backspace") {
+        deleteLastElement(e.key);
+    }
+}
