@@ -103,9 +103,9 @@ function addDecimal() {
 }
 
 const buttonEnter = document.querySelector(".enter");
-buttonEnter.addEventListener("click", pressEnter);
+buttonEnter.addEventListener("click", calculateExpression);
 
-function pressEnter() {
+function calculateExpression() {
     display.textContent = "";
     displayValue = "";
     operate(previousValue, currentValue, operator);
