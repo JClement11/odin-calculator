@@ -82,11 +82,14 @@ operators.forEach((operator) => operator.addEventListener("click", function(e) {
 }));
 
 function handleOperator(op) {
-    displayValue += op;
-    previousValue = currentValue;
-    operator = op;
-    currentValue = "";
-    display.textContent = displayValue;
+    if (displayValue.includes("+") === false && displayValue.includes("−") === false
+    && displayValue.includes("×") === false && displayValue.includes("÷") === false) {
+        displayValue += op;
+        previousValue = currentValue;
+        operator = op;
+        currentValue = "";
+        display.textContent = displayValue;
+    }
 }
 
 const buttonDecimal = document.querySelector(".decimal");
