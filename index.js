@@ -67,19 +67,18 @@ let numbers = document.querySelectorAll(".number");
 let operators = document.querySelectorAll(".operator");
 
 numbers.forEach((number) => number.addEventListener("click", function(e) {
-    display.style.fontSize = "75px";
     handleNumber(e.target.textContent);
-    display.textContent = displayValue;
 }));
 
 function handleNumber(num) {
+    display.style.fontSize = "75px";
     displayValue += num;
     currentValue += num;
+    display.textContent = displayValue;
 }
 
 operators.forEach((operator) => operator.addEventListener("click", function(e) {
     handleOperator(e.target.textContent);
-    display.textContent = displayValue;
 }));
 
 function handleOperator(op) {
@@ -87,6 +86,7 @@ function handleOperator(op) {
     previousValue = currentValue;
     operator = op;
     currentValue = "";
+    display.textContent = displayValue;
 }
 
 const buttonDecimal = document.querySelector(".decimal");
