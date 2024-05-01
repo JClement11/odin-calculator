@@ -90,7 +90,9 @@ function handleOperator(op) {
 }
 
 const buttonDecimal = document.querySelector(".decimal");
-buttonDecimal.addEventListener("click", () => {
+buttonDecimal.addEventListener("click", addDecimal);
+
+function addDecimal() {
     if (display.textContent === "ERROR! You can't divide by zero silly!") {
         display.textContent = "";
     }
@@ -98,17 +100,21 @@ buttonDecimal.addEventListener("click", () => {
     display.textContent += ".";
     displayValue += ".";
     currentValue += ".";  
-});
+}
 
 const buttonEnter = document.querySelector(".enter");
-buttonEnter.addEventListener("click", () => {
+buttonEnter.addEventListener("click", pressEnter);
+
+function pressEnter() {
     display.textContent = "";
     displayValue = "";
     operate(previousValue, currentValue, operator);
-});
+}
 
 const buttonBackspace = document.querySelector(".backspace");
-buttonBackspace.addEventListener("click", () => {
+buttonBackspace.addEventListener("click", deleteLastElement);
+
+function deleteLastElement() {
     if (currentValue.length !== 0 && previousValue.length !== 0 && operator.length !== 0) {
         currentValue = currentValue.slice(0, -1);
         display.textContent = displayValue.slice(0, -1);
@@ -121,6 +127,11 @@ buttonBackspace.addEventListener("click", () => {
         currentValue = previousValue;
         previousValue = "";
     }
+    else if (currentValue.length === 0 && previousValue.length === 0 && operator.length !== 0) {
+        operator = operator.slice(0, -1);
+        display.textContent = displayValue.slice(0, -1);
+        displayValue = displayValue.slice(0,-1);
+    }
     else if (currentValue.length === 0 && previousValue.length !== 0 && operator.length === 0) {
         previousValue = previousValue.slice(0, -1);
         display.textContent = displayValue.slice(0, -1);
@@ -131,12 +142,14 @@ buttonBackspace.addEventListener("click", () => {
         display.textContent = displayValue.slice(0, -1);
         displayValue = displayValue.slice(0,-1);
     }
-});
+}
 
 const buttonClear = document.querySelector(".clear");
-buttonClear.addEventListener("click", () => {
+buttonClear.addEventListener("click", clearCalculator);
+
+function clearCalculator() {
     currentValue = "";
     previousValue = "";
     displayValue = "";
     display.textContent = "";
-});
+}
