@@ -71,10 +71,12 @@ numbers.forEach((number) => number.addEventListener("click", function(e) {
 }));
 
 function handleNumber(num) {
-    display.style.fontSize = "75px";
-    displayValue += num;
-    currentValue += num;
-    display.textContent = displayValue;
+    if (currentValue.length <= 6) {
+        display.style.fontSize = "75px";
+        displayValue += num;
+        currentValue += num;
+        display.textContent = displayValue;
+    }
 }
 
 operators.forEach((operator) => operator.addEventListener("click", function(e) {
