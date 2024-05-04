@@ -18,7 +18,6 @@ function subtract(num1, num2) {
     display.textContent = total;
     currentValue = "";
     previousValue = "";
-    return total;
 }
 
 function multiply(num1, num2) {
@@ -27,7 +26,6 @@ function multiply(num1, num2) {
     display.textContent = total;
     currentValue = "";
     previousValue = "";
-    return total;
 }
 
 function divide(num1, num2) {
@@ -43,7 +41,6 @@ function divide(num1, num2) {
         display.textContent = total;
         currentValue = "";
         previousValue = "";
-        return total;
     }
 }
 
